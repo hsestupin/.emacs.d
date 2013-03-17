@@ -21,6 +21,7 @@
 (require 'init-exec-path) ;; Set up $PATH
 
 ;; list of packages
+(require 'init-gui-frames)
 (require 'init-clojure)
 
 ;;----------------------------------------------------------------------------
