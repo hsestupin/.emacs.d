@@ -11,6 +11,13 @@ auto-save-list
 
 *~
 
+################
+## clojure
+###############
+
+repl-port
+
+
 # Mac crap
 .DS_Store
 
