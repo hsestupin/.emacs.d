@@ -21,8 +21,8 @@
 (require 'init-exec-path) ;; Set up $PATH
 
 ;; list of packages
+(require 'init-osx-keys)
 (require 'init-gui-frames)
-(require 'init-clojure)
 
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-local" containing personal settings
