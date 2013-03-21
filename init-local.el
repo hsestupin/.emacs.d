@@ -10,4 +10,12 @@
 ;; set fullscreen mode on startup  
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
+;; Here comes clojure
+(when (not (package-installed-p 'nrepl))
+  (package-install 'nrepl)) 
+
+(add-hook 'nrepl-interaction-mode-hook
+  'nrepl-turn-on-eldoc-mode)
+(setq nrepl-hide-special-buffers t)
+
 (provide 'init-local)
