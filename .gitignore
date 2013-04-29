@@ -4,6 +4,8 @@
 
 elpa
 auto-save-list
+.smex-items
+places
 
 #################
 ## emacs
