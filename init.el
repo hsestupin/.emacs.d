@@ -1,6 +1,11 @@
 (require 'package)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("marmalade" . "https://marmalade-repo.org/packages/")
+             t)
+
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") 
+             t)
 (package-initialize)
 
 ;;----------------------------------------------------------------------
@@ -10,9 +15,13 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings)
+(defvar my-packages 
+  '(better-defaults cider)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; set some editor specific parameters
+(set-frame-parameter nil 'fullscreen 'fullboth)
