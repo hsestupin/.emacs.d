@@ -6,6 +6,7 @@ elpa
 auto-save-list
 .smex-items
 places
+ido.last
 
 #################
 ## emacs

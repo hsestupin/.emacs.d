@@ -16,7 +16,32 @@
 
 ;; Add in your own as you wish:
 (defvar my-packages 
-  '(better-defaults cider)
+  '(
+  ;better-defaults 
+
+  ;; integration with a Clojure REPL
+  ;; https://github.com/clojure-emacs/cider
+  cider 
+
+  ;; key bindings and code colorization for Clojure
+  ;; https://github.com/clojure-emacs/clojure-mode
+  clojure-mode
+  
+  ;; makes handling lisp expressions much, much easier
+  ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
+  paredit
+
+  ;; Enhances M-x to allow easier execution of commands. Provides
+  ;; a filterable list of possible commands in the minibuffer
+  ;; http://www.emacswiki.org/emacs/Smex
+  smex
+
+  ;; extra syntax highlighting for clojure
+  clojure-mode-extra-font-locking
+
+  ;; git integration
+  magit
+  )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -25,3 +50,21 @@
 
 ;; set some editor specific parameters
 (set-frame-parameter nil 'fullscreen 'fullboth)
+
+;;;;
+;; Customization
+;;;;
+
+;; Add a directory to our load path so that when you `load` things
+;; below, Emacs knows where to look for the corresponding file.
+(add-to-list 'load-path "~/.emacs.d/customizations")
+
+;; Langauage-specific
+(load "setup-clojure.el")
+
+;; Hard-to-categorize customizations
+(load "misc.el")
+
+;; These customizations change the way emacs looks and disable/enable
+;; some user interface elements
+(load "ui.el")
