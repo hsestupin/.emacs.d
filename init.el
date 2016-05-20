@@ -48,8 +48,6 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-;; set some editor specific parameters
-(set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;;;;
 ;; Customization

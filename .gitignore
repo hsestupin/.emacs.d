@@ -25,4 +25,5 @@ repl-port
 .DS_Store
 
 
-
+#CIDER
+cider-history
