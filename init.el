@@ -66,3 +66,7 @@
 ;; These customizations change the way emacs looks and disable/enable
 ;; some user interface elements
 (load "ui.el")
+
+;; Load some Mac OS specific configurations. Redefine Meta-key, etc
+(if (string-equal system-type "darwin")
+    (load "mac-os.el"))

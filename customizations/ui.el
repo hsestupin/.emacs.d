@@ -11,4 +11,8 @@
 (load-theme 'tomorrow-night-bright t)
 
 
+;; set fullscreen mode on startup
 (set-frame-parameter nil 'fullscreen 'fullboth)
+
+;; Turn off both vertical and horizontal scrollbars
+(scroll-bar-mode -1)
