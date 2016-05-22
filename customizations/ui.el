@@ -16,3 +16,6 @@
 
 ;; Turn off both vertical and horizontal scrollbars
 (scroll-bar-mode -1)
+
+;; Select another window in cyclic ordering of windows with "M-`"
+(global-set-key (kbd "M-`") 'other-window)
