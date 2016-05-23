@@ -17,31 +17,33 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
-  ;better-defaults 
+    ;; ac-cider is a completion source for Emacs auto-complete package
+    ;; that uses CIDER (and Compliment) as candidates provider
+    ac-cider
 
-  ;; integration with a Clojure REPL
-  ;; https://github.com/clojure-emacs/cider
-  cider 
+    ;; integration with a Clojure REPL
+    ;; https://github.com/clojure-emacs/cider
+    cider 
 
-  ;; key bindings and code colorization for Clojure
-  ;; https://github.com/clojure-emacs/clojure-mode
-  clojure-mode
-  
-  ;; makes handling lisp expressions much, much easier
-  ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
-  paredit
+    ;; key bindings and code colorization for Clojure
+    ;; https://github.com/clojure-emacs/clojure-mode
+    clojure-mode
+    
+    ;; makes handling lisp expressions much, much easier
+    ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
+    paredit
 
-  ;; Enhances M-x to allow easier execution of commands. Provides
-  ;; a filterable list of possible commands in the minibuffer
-  ;; http://www.emacswiki.org/emacs/Smex
-  smex
+    ;; Enhances M-x to allow easier execution of commands. Provides
+    ;; a filterable list of possible commands in the minibuffer
+    ;; http://www.emacswiki.org/emacs/Smex
+    smex
 
-  ;; extra syntax highlighting for clojure
-  clojure-mode-extra-font-locking
+    ;; extra syntax highlighting for clojure
+    clojure-mode-extra-font-locking
 
-  ;; git integration
-  magit
-  )
+    ;; git integration
+    magit
+    )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

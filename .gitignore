@@ -7,6 +7,7 @@ auto-save-list
 .smex-items
 places
 ido.last
+ac-comphist.dat
 
 #################
 ## emacs
