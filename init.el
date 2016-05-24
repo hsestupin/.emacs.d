@@ -17,6 +17,9 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; add some super usefull clojure functionality https://github.com/clojure-emacs/clj-refactor.el
+    clj-refactor
+    
     ;; ac-cider is a completion source for Emacs auto-complete package
     ;; that uses CIDER (and Compliment) as candidates provider
     ac-cider
