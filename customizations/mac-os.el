@@ -1,3 +1,4 @@
+
 ;; Macbook hooks :o
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'none)
