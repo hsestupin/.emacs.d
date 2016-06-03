@@ -11,3 +11,7 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+;; Enable ido mode (https://www.emacswiki.org/emacs/InteractivelyDoThings) by default
+(require 'ido)
+(ido-mode t)
