@@ -62,6 +62,9 @@
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
+;; Paredit mode setup
+(load "paredit-setup.el")
+
 ;; Langauage-specific
 (load "setup-clojure.el")
 

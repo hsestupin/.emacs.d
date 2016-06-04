@@ -103,13 +103,3 @@
     (cljr-add-keybindings-with-prefix "C-c C-m"))
 
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
-
-
-;; Paredit more convenient keybindings. Same as my Intellij Idea Cursive plugin setup
-(eval-after-load 'paredit
-  '(progn
-     (define-key paredit-mode-map (kbd "M-)") 'paredit-forward-slurp-sexp)
-     (define-key paredit-mode-map (kbd "C-M-0")  'paredit-forward-barf-sexp)
-     (define-key paredit-mode-map (kbd "M-(") 'paredit-backward-slurp-sexp)
-     (define-key paredit-mode-map (kbd "C-M-9")  'paredit-backward-barf-sexp)))
-
