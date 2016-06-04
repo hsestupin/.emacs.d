@@ -19,3 +19,6 @@
 
 ;; Select another window in cyclic ordering of windows with "M-`"
 (global-set-key (kbd "M-`") 'other-window)
+
+(global-set-key (kbd "<C-tab>") 'next-multiframe-window)
+(global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
