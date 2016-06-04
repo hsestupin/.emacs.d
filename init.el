@@ -46,6 +46,9 @@
 
     ;; git integration
     magit
+
+    ;; Yasnippet. Template system for Emacs. It allows you to type an abbreviation and automatically expand it into function templates
+    yasnippet
     )
   "A list of packages to ensure are installed at launch.")
 
