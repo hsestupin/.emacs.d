@@ -28,3 +28,5 @@ repl-port
 
 #CIDER
 cider-history
+/.mc-lists.el
+eshell/

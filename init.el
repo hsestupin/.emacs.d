@@ -78,6 +78,9 @@
 ;; some user interface elements
 (load "ui.el")
 
+;; opportunity to find files in git projects https://github.com/technomancy/find-file-in-project
+(load "find-file-in-project.el")
+
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
