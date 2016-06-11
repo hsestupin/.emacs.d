@@ -49,6 +49,9 @@
 
     ;; Yasnippet. Template system for Emacs. It allows you to type an abbreviation and automatically expand it into function templates
     yasnippet
+
+    ;; Projectile. Helps you to manage project management. Basically was installed to find files inside a project and switching betweeb *.cpp/*.h files.
+    projectile
     )
   "A list of packages to ensure are installed at launch.")
 
@@ -77,9 +80,6 @@
 ;; These customizations change the way emacs looks and disable/enable
 ;; some user interface elements
 (load "ui.el")
-
-;; opportunity to find files in git projects https://github.com/technomancy/find-file-in-project
-(load "find-file-in-project.el")
 
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
