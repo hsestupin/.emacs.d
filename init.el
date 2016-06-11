@@ -81,6 +81,9 @@
 ;; some user interface elements
 (load "ui.el")
 
+;; Default lisp mode customizations
+(load "setup-lisp-mode.el")
+
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
