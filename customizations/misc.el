@@ -27,3 +27,6 @@
 ;; Setup yasnippets
 (require 'yasnippet)
 (yas-global-mode 1)
+
+; enable beautiful parenthesis highlighting
+(show-paren-mode 1)
