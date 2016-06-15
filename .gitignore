@@ -30,3 +30,4 @@ repl-port
 cider-history
 /.mc-lists.el
 eshell/
+/smex-items
