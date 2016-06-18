@@ -92,6 +92,8 @@
 ;; Company mode customizations
 (load "company-setup.el")
 
+(load "magit-setup.el")
+
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
