@@ -1,3 +1,4 @@
+
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "https://marmalade-repo.org/packages/")
@@ -51,6 +52,9 @@
 
     ;; Projectile. Helps you to manage project management. Basically was installed to find files inside a project and switching betweeb *.cpp/*.h files.
     projectile
+
+    ;; Markdown highlighting
+    markdown-mode
     )
   "A list of packages to ensure are installed at launch.")
 
