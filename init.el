@@ -72,7 +72,7 @@
 (load "paredit-setup.el")
 
 ;; Langauage-specific
-(load "setup-clojure.el")
+(load "clojure-setup.el")
 
 ;; Hard-to-categorize customizations
 (load "misc.el")
@@ -82,7 +82,7 @@
 (load "ui.el")
 
 ;; Default lisp mode customizations
-(load "setup-lisp-mode.el")
+(load "lisp-mode-setup.el")
 
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
