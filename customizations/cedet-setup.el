@@ -14,6 +14,17 @@
 ;; Activate semantic
 (semantic-mode 1)
 
+;; Implementing my own copy of this function since it is required by
+;; semantic-ia-fast-jump but this function is not defined in etags.el
+;; of GNU emacs
+(require 'etags)
+(unless (fboundp 'push-tag-mark)
+  (defun push-tag-mark ()
+    "Push the current position to the ring of markers so that
+    \\[pop-tag-mark] can be used to come back to current position."
+    (interactive)
+    (ring-insert find-tag-marker-ring (point-marker))))
+
 ;; customisation of modes
 (defun hsestupin/cedet-hook ()
   (local-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
@@ -22,7 +33,9 @@
   (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
   (local-set-key "\C-c=" 'semantic-decoration-include-visit)
 
-  (local-set-key "\C-cj" 'semantic-ia-fast-jump)
+  (local-set-key (kbd "M-.") 'semantic-ia-fast-jump)
+  ;; going back from previous semantic-ia-fast-jump
+  (local-set-key (kbd "M-,") 'pop-tag-mark)
   (local-set-key "\C-cq" 'semantic-ia-show-doc)
   (local-set-key "\C-cs" 'semantic-ia-show-summary)
   (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
@@ -33,3 +46,6 @@
 (add-hook 'emacs-lisp-mode-hook 'hsestupin/cedet-hook)
 (add-hook 'erlang-mode-hook 'hsestupin/cedet-hook)
 
+;; EDE
+(global-ede-mode 1)
+(ede-enable-generic-projects)
