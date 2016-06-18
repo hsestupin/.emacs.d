@@ -20,10 +20,9 @@
     ;; add some super usefull clojure functionality https://github.com/clojure-emacs/clj-refactor.el
     clj-refactor
     
-    ;; ac-cider is a completion source for Emacs auto-complete package
-    ;; that uses CIDER (and Compliment) as candidates provider
-    ac-cider
-
+    ;; Complete anything. http://company-mode.github.io/
+    company
+    
     ;; integration with a Clojure REPL
     ;; https://github.com/clojure-emacs/cider
     cider 
@@ -68,6 +67,9 @@
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
+;; CEDET setup
+(load "cedet-setup.el")
+
 ;; Paredit mode setup
 (load "paredit-setup.el")
 
@@ -83,6 +85,9 @@
 
 ;; Default lisp mode customizations
 (load "lisp-mode-setup.el")
+
+;; Company mode customizations
+(load "company-setup.el")
 
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")

@@ -34,3 +34,4 @@ eshell/
 semanticdb
 /projectile.cache
 server
+/srecode-map.el
