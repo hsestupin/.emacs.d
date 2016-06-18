@@ -31,3 +31,5 @@ cider-history
 /.mc-lists.el
 eshell/
 /smex-items
+semanticdb
+/projectile.cache
