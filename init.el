@@ -81,6 +81,7 @@
 (load "flx/flx.el")
 (load "flx/flx-ido.el")
 
+(load "ido-setup.el")
 ;; CEDET setup
 (load "cedet-setup.el")
 
