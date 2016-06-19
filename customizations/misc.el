@@ -12,18 +12,6 @@
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
 
-;; Enable ido mode (https://www.emacswiki.org/emacs/InteractivelyDoThings) by default
-(require 'ido)
-(ido-mode t)
-
-;; Switch on smex
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-
 ;; Setup yasnippets
 (require 'yasnippet)
 (yas-global-mode 1)

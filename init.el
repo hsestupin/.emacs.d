@@ -57,6 +57,9 @@
 
     ;; Super usefull and tiny emacs extentions. Thanks to @bbatsov - https://github.com/bbatsov/crux
     crux
+
+    ;; ido mode everywhere
+    ido-ubiquitous
     )
   "A list of packages to ensure are installed at launch.")
 
@@ -71,6 +74,12 @@
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
+
+;; Vendors folder
+(add-to-list 'load-path "~/.emacs.d/vendor")
+
+(load "flx/flx.el")
+(load "flx/flx-ido.el")
 
 ;; CEDET setup
 (load "cedet-setup.el")
@@ -100,3 +109,4 @@
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
+

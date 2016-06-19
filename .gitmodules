@@ -1,0 +1,3 @@
+[submodule "vendor/flx"]
+	path = vendor/flx
+	url = https://github.com/lewang/flx
