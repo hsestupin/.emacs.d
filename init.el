@@ -54,13 +54,15 @@
 
     ;; Markdown highlighting
     markdown-mode
+
+    ;; Super usefull and tiny emacs extentions. Thanks to @bbatsov - https://github.com/bbatsov/crux
+    crux
     )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
-
 
 ;;;;
 ;; Customization
@@ -94,6 +96,7 @@
 
 (load "magit-setup.el")
 
+(load "crux-bindings.el")
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
