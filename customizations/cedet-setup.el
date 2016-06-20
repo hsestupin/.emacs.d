@@ -45,7 +45,3 @@
 (add-hook 'scheme-mode-hook 'hsestupin/cedet-hook)
 (add-hook 'emacs-lisp-mode-hook 'hsestupin/cedet-hook)
 (add-hook 'erlang-mode-hook 'hsestupin/cedet-hook)
-
-;; EDE
-(global-ede-mode 1)
-(ede-enable-generic-projects)
