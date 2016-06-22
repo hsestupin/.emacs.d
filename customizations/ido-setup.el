@@ -1,6 +1,7 @@
 (require 'ido)
 (require 'ido-ubiquitous)
 (require 'flx-ido)
+(require 'ido-vertical-mode)
 
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
@@ -11,6 +12,7 @@
       ido-auto-merge-work-directories-length -1)
 (ido-mode +1)
 (ido-ubiquitous-mode +1)
+(ido-vertical-mode 1)
 
 ;;; smarter fuzzy matching for ido
 (flx-ido-mode +1)

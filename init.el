@@ -17,6 +17,9 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; display ido completions vertically finally
+    ido-vertical-mode
+    
     ;; load directory instead of loading every file
     load-dir
     
