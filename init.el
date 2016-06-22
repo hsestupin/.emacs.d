@@ -17,6 +17,9 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; load directory instead of loading every file
+    load-dir
+    
     ;; add some super usefull clojure functionality https://github.com/clojure-emacs/clj-refactor.el
     clj-refactor
     
@@ -80,6 +83,7 @@
 
 (load "flx/flx.el")
 (load "flx/flx-ido.el")
+(load "load-dir/load-dir.el")
 
 (load "ido-setup.el")
 ;; CEDET setup
@@ -103,11 +107,12 @@
 
 ;; Company mode customizations
 (load "company-setup.el")
-
 (load "magit-setup.el")
-
 (load "crux-bindings.el")
+(load "dsvn.el")
+(load "projectile-setup.el")
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
 
+(load-dir-one "~/.emacs.d/host-specific")
