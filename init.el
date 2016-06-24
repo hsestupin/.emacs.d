@@ -121,7 +121,6 @@
 
 (load "magit-setup.el")
 (load "crux-bindings.el")
-(load "dsvn.el")
 (load "projectile-setup.el")
 (load "git-gutter-setup.el")
 
