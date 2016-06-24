@@ -1,3 +1,3 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
-(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
+(global-set-key (kbd "C-SPC") #'company-complete)
