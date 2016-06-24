@@ -19,7 +19,15 @@
   '(
     ;; display ido completions vertically finally
     ido-vertical-mode
-    
+
+    ;; Finally decided that I really need hydra standing by for a long time that
+    ;; it will not a must-have requirement in you emacs workflow.
+    ;;
+    ;; git-gutter - was for me the reason to use Hydra!
+    ;; Serves as a file diff tools right in the you buffer.
+    ;; Supports git and svn as backends.
+    git-gutter
+
     ;; load directory instead of loading every file
     load-dir
     
@@ -110,10 +118,16 @@
 
 ;; Company mode customizations
 (load "company-setup.el")
+
 (load "magit-setup.el")
 (load "crux-bindings.el")
 (load "dsvn.el")
 (load "projectile-setup.el")
+(load "git-gutter-setup.el")
+
+;; from vendor
+(load "dsvn.el")
+
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
