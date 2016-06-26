@@ -18,3 +18,7 @@
 
 ; enable beautiful parenthesis highlighting
 (show-paren-mode 1)
+
+;; show available keybindings after you start typing
+(require 'which-key)
+(which-key-mode +1)

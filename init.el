@@ -20,6 +20,9 @@
     ;; display ido completions vertically finally
     ido-vertical-mode
 
+    ;; show available keybinding after you start typing
+    which-key
+
     ;; Finally decided that I really need hydra standing by for a long time that
     ;; it will not a must-have requirement in you emacs workflow.
     ;;
