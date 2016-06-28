@@ -11,6 +11,7 @@
 (add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode)
 
+(setq semantic-symref-tool 'global)
 ;; Activate semantic
 (semantic-mode 1)
 

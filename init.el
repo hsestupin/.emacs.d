@@ -17,6 +17,9 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; this package was added for the sake of generating tags right from Emacs with funciton `ggtags-create-tags`
+    ggtags
+    
     ;; display ido completions vertically finally
     ido-vertical-mode
 
