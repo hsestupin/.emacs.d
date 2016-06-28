@@ -34,7 +34,7 @@
   (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
   (local-set-key "\C-c=" 'semantic-decoration-include-visit)
 
-  (local-set-key (kbd "M-.") 'semantic-ia-fast-jump)
+  (local-set-key (kbd "M-j") 'semantic-ia-fast-jump)
   ;; going back from previous semantic-ia-fast-jump
   (local-set-key (kbd "M-,") 'pop-tag-mark)
   (local-set-key "\C-cq" 'semantic-ia-show-doc)

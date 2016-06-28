@@ -129,6 +129,7 @@
 (load "crux-bindings.el")
 (load "projectile-setup.el")
 (load "git-gutter-setup.el")
+(load "ggtags-setup.el")
 
 ;; from vendor
 (load "dsvn.el")
