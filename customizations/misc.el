@@ -22,3 +22,6 @@
 ;; show available keybindings after you start typing
 (require 'which-key)
 (which-key-mode +1)
+
+;; add global kbd for imenu
+(global-set-key (kbd "C-M-S-i") 'imenu)
