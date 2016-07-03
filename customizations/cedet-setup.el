@@ -46,3 +46,4 @@
 (add-hook 'scheme-mode-hook 'hsestupin/cedet-hook)
 (add-hook 'emacs-lisp-mode-hook 'hsestupin/cedet-hook)
 (add-hook 'erlang-mode-hook 'hsestupin/cedet-hook)
+(add-hook 'python-mode-hook 'hsestupin/cedet-hook)
