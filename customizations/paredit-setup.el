@@ -8,7 +8,8 @@
      (define-key paredit-mode-map (kbd "M-)") 'paredit-forward-slurp-sexp)
      (define-key paredit-mode-map (kbd "C-M-0")  'paredit-forward-barf-sexp)
      (define-key paredit-mode-map (kbd "M-(") 'paredit-backward-slurp-sexp)
-     (define-key paredit-mode-map (kbd "C-M-9")  'paredit-backward-barf-sexp)))
+     (define-key paredit-mode-map (kbd "C-M-9")  'paredit-backward-barf-sexp)
+     (define-key paredit-mode-map (kbd "C-M-<backspace>")  'backward-kill-sexp)))
 
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
 (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
