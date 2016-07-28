@@ -17,6 +17,10 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; https://github.com/Wilfred/ag.el
+    ;; frontend for awesome super fast search enging for silver searcher https://github.com/ggreer/the_silver_searcher
+    ag
+    
     ;; this package was added for the sake of generating tags right from Emacs with funciton `ggtags-create-tags`
     ggtags
     
@@ -130,6 +134,7 @@
 (load "projectile-setup.el")
 (load "git-gutter-setup.el")
 (load "ggtags-setup.el")
+(load "ag-setup.el")
 
 ;; from vendor
 (load "dsvn.el")
