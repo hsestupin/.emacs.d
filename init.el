@@ -17,6 +17,9 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; beautiful restclient https://github.com/pashky/restclient.el
+    restclient
+    
     ;; https://github.com/Wilfred/ag.el
     ;; frontend for awesome super fast search enging for silver searcher https://github.com/ggreer/the_silver_searcher
     ag
@@ -138,6 +141,9 @@
 
 ;; from vendor
 (load "dsvn.el")
+
+(load "p4.el/p4.el")
+(require 'p4)
 
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
