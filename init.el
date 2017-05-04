@@ -17,6 +17,9 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; fuzzy matching https://github.com/lewang/flx
+    flx-ido
+    
     ;; beautiful restclient https://github.com/pashky/restclient.el
     restclient
     
@@ -105,13 +108,7 @@
 ;; Vendors folder
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
-(load "flx/flx.el")
-(load "flx/flx-ido.el")
-(load "load-dir/load-dir.el")
-
 (load "ido-setup.el")
-;; CEDET setup
-(load "cedet-setup.el")
 
 ;; Paredit mode setup
 (load "paredit-setup.el")
@@ -139,14 +136,6 @@
 (load "ggtags-setup.el")
 (load "ag-setup.el")
 
-;; from vendor
-(load "dsvn.el")
-
-(load "p4.el/p4.el")
-(require 'p4)
-
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
-
-(load-dir-one "~/.emacs.d/host-specific")

@@ -1,9 +1,0 @@
-[submodule "vendor/flx"]
-	path = vendor/flx
-	url = https://github.com/lewang/flx
-[submodule "vendor/load-dir"]
-	path = vendor/load-dir
-	url = https://github.com/emacsmirror/load-dir
-[submodule "vendor/p4.el"]
-	path = vendor/p4.el
-	url = https://github.com/gareth-rees/p4.el.git
