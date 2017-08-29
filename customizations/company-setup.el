@@ -1,9 +1,6 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; in Mac OS terminal doesn't recognize ctrl-space keystroke
-(if (string-equal system-type "darwin")
-    (global-set-key (kbd "C-@") #'company-complete)
-    (global-set-key (kbd "C-SPC") #'company-complete))
+(global-set-key (kbd "C-SPC") #'company-complete)
 
 (with-eval-after-load 'company	  
   (define-key company-active-map (kbd "C-n") 'company-select-next)
