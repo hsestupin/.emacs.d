@@ -8,5 +8,6 @@
 
 ;; Extend exec-path with /usr/local/bin
 (add-to-list 'exec-path "~/bin")
+(add-to-list 'exec-path "/usr/local/bin")
 
 (global-set-key (kbd "<s-return>") #'smex)
