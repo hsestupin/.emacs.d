@@ -25,3 +25,5 @@
 
 ;; add global kbd for imenu
 (global-set-key (kbd "C-M-S-i") 'imenu)
+
+(global-set-key (kbd "C-;") 'avy-goto-char)

@@ -17,6 +17,9 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; fast jump to a specific character on the screen
+    avy
+    
     ;; fuzzy matching https://github.com/lewang/flx
     flx-ido
     
@@ -135,6 +138,7 @@
 (load "git-gutter-setup.el")
 (load "ggtags-setup.el")
 (load "ag-setup.el")
+(load "avy-setup.el")
 
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
