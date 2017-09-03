@@ -56,10 +56,14 @@
 (add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
 
+;; Setup clj-refactor
+(require 'clj-refactor)
+ ;; temporary workaround for clj-refactor, see https://github.com/clojure-emacs/clj-refactor.el/issues/365
+(require 'seq-25)
 
 (defun cider-refresh ()
   (interactive)
-  (cider-interactive-eval (format "(user/reset)")))
+  (cider-interactive-eval (format "(reset-state!)")))
 
 (defun cider-user-ns ()
   (interactive)
