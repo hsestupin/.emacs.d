@@ -138,7 +138,6 @@
 (load "git-gutter-setup.el")
 (load "ggtags-setup.el")
 (load "ag-setup.el")
-(load "avy-setup.el")
 
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
