@@ -1,3 +1,7 @@
+;; https://github.com/purcell/exec-path-from-shell
+;; in short it allows to pull the same shell environment as in terminal
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 ;; Macbook hooks :o
 ;; (setq mac-command-modifier 'meta)

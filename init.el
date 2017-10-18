@@ -17,6 +17,12 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
+    ;; https://github.com/haskell/haskell-mode
+    haskell-mode
+    
+    ;; https://github.com/purcell/exec-path-from-shell
+    exec-path-from-shell
+    
     ;; fast jump to a specific character on the screen
     avy
     
