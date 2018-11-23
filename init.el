@@ -123,7 +123,7 @@
 (load "paredit-setup.el")
 
 ;; Langauage-specific
-(load "clojure-setup.el")
+;; (load "clojure-setup.el")
 
 ;; Hard-to-categorize customizations
 (load "misc.el")
