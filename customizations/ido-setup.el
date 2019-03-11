@@ -13,7 +13,8 @@
 (ido-mode +1)
 (ido-ubiquitous-mode +1)
 (ido-vertical-mode 1)
-(setq ido-vertical-define-keys 'C-n-and-C-p-only)
+;;(setq ido-vertical-define-keys 'C-n-and-C-p-only)
+(setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
 
 ;;; smarter fuzzy matching for ido
 (flx-ido-mode +1)
