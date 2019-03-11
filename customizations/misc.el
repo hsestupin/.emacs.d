@@ -27,3 +27,7 @@
 (global-set-key (kbd "C-M-S-i") 'imenu)
 
 (global-set-key (kbd "C-;") 'avy-goto-char)
+
+
+;; select-all with Gnome defaul <C + />
+(global-set-key (kbd "C-/") 'mark-whole-buffer)
