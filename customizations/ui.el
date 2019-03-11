@@ -27,3 +27,4 @@
 
 (global-set-key (kbd "<C-tab>") 'next-multiframe-window)
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
+(set-face-attribute 'default nil :height 120)
