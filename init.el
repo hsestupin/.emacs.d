@@ -17,71 +17,27 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
-    ;; https://github.com/haskell/haskell-mode
-    haskell-mode
-    
     ;; https://github.com/purcell/exec-path-from-shell
-    exec-path-from-shell
-    
-    ;; fast jump to a specific character on the screen
-    avy
-    
-    ;; fuzzy matching https://github.com/lewang/flx
-    flx-ido
-    
-    ;; beautiful restclient https://github.com/pashky/restclient.el
-    restclient
+    exec-path-from-shell  
     
     ;; https://github.com/Wilfred/ag.el
     ;; frontend for awesome super fast search enging for silver searcher https://github.com/ggreer/the_silver_searcher
     ag
-    
-    ;; this package was added for the sake of generating tags right from Emacs with funciton `ggtags-create-tags`
-    ggtags
-    
-    ;; display ido completions vertically finally
-    ido-vertical-mode
-
+           
     ;; show available keybinding after you start typing
     which-key
 
-    ;; Finally decided that I really need hydra standing by for a long time that
-    ;; it will not a must-have requirement in you emacs workflow.
-    ;;
-    ;; git-gutter - was for me the reason to use Hydra!
-    ;; Serves as a file diff tools right in the you buffer.
-    ;; Supports git and svn as backends.
-    git-gutter
-
     ;; load directory instead of loading every file
-    load-dir
-    
-    ;; add some super usefull clojure functionality https://github.com/clojure-emacs/clj-refactor.el
-    clj-refactor
-    
+    load-dir    
+   
     ;; Complete anything. http://company-mode.github.io/
     company
-    
-    ;; integration with a Clojure REPL
-    ;; https://github.com/clojure-emacs/cider
-    cider 
-
-    ;; key bindings and code colorization for Clojure
-    ;; https://github.com/clojure-emacs/clojure-mode
-    clojure-mode
-    
-    ;; makes handling lisp expressions much, much easier
-    ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
-    paredit
-
+       
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
     ;; http://www.emacswiki.org/emacs/Smex
     smex
-
-    ;; extra syntax highlighting for clojure
-    clojure-mode-extra-font-locking
-
+    
     ;; git integration
     magit
 
@@ -98,7 +54,7 @@
     crux
 
     ;; ido mode everywhere
-    ido-ubiquitous
+    ;ido-ubiquitous
     )
   "A list of packages to ensure are installed at launch.")
 
@@ -117,13 +73,42 @@
 ;; Vendors folder
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
-(load "ido-setup.el")
+;; fuzzy matching https://github.com/lewang/flx
+(when (not (package-installed-p 'flx-ido))
+    (package-install 'flx-ido))
 
-;; Paredit mode setup
-(load "paredit-setup.el")
+;; display ido completions vertically
+(when (not (package-installed-p 'ido-vertical-mode))
+    (package-install 'ido-vertical-mode))
 
-;; Langauage-specific
-;; (load "clojure-setup.el")
+;(require 'ido)
+;(require 'ido-ubiquitous)
+(require 'flx-ido)
+(require 'ido-vertical-mode)
+
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point 'guess
+      ido-max-prospects 10
+      ido-default-file-method 'selected-window
+      ido-auto-merge-work-directories-length -1)
+(ido-mode +1)
+;(ido-ubiquitous-mode +1)
+(ido-vertical-mode 1)
+;;(setq ido-vertical-define-keys 'C-n-and-C-p-only)
+(setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
+
+;;; smarter fuzzy matching for ido
+(flx-ido-mode +1)
+;; disable ido faces to see flx highlights
+(setq ido-use-faces nil)
+
+;;; smex, remember recently and most frequently used commands
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 ;; Hard-to-categorize customizations
 (load "misc.el")
@@ -141,10 +126,11 @@
 (load "magit-setup.el")
 (load "crux-bindings.el")
 (load "projectile-setup.el")
-(load "git-gutter-setup.el")
+
 (load "ggtags-setup.el")
 (load "ag-setup.el")
 
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
     (load "mac-os.el"))
+

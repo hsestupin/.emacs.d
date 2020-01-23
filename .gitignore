@@ -41,3 +41,5 @@ server
 /host-specific
 /bookmarks
 /network-security.data
+/#ido.last#
+/tramp
