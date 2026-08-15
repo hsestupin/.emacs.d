@@ -43,3 +43,8 @@ server
 /network-security.data
 /#ido.last#
 /tramp
+/eln-cache/
+/projects
+/.lsp-session-v1
+/transient/
+/tree-sitter/

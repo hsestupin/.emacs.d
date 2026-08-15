@@ -12,10 +12,6 @@
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
 
-;; Setup yasnippets
-(require 'yasnippet)
-(yas-global-mode 1)
-
 ; enable beautiful parenthesis highlighting
 (show-paren-mode 1)
 
@@ -27,7 +23,3 @@
 (global-set-key (kbd "C-M-S-i") 'imenu)
 
 (global-set-key (kbd "C-;") 'avy-goto-char)
-
-
-;; select-all with Gnome defaul <C + />
-(global-set-key (kbd "C-/") 'mark-whole-buffer)
