@@ -31,6 +31,9 @@
     ;; Super usefull and tiny emacs extentions. Thanks to @bbatsov - https://github.com/bbatsov/crux
     crux
 
+    ;; consult-imenu: flat, filterable jump-to-symbol list. https://github.com/minad/consult
+    consult
+
     )
   "A list of packages to ensure are installed at launch.")
 
@@ -53,16 +56,16 @@
 ;(when (not (package-installed-p 'ido-vertical-mode))
 ;    (package-install 'ido-vertical-mode))
 
-(require 'ido)
+;(require 'ido)
 
-(setq ido-enable-prefix nil
-      ido-enable-flex-matching t
-      ido-create-new-buffer 'always
-      ido-use-filename-at-point 'guess
-      ido-max-prospects 10
-      ido-default-file-method 'selected-window
-      ido-auto-merge-work-directories-length -1)
-(ido-mode +1)
+;; (setq ido-enable-prefix nil
+;;       ido-enable-flex-matching t
+;;       ido-create-new-buffer 'always
+;;       ido-use-filename-at-point 'guess
+;;       ido-max-prospects 10
+;;       ido-default-file-method 'selected-window
+;;       ido-auto-merge-work-directories-length -1)
+;; (ido-mode +1)
 
 ;; These customizations change the way emacs looks and disable/enable
 ;; some user interface elements
@@ -87,6 +90,7 @@
 
 ;; experiments
 
+(fido-vertical-mode 1)
 
-
-
+;; IntelliJ's File Structure. Replaces tab-to-tab-stop on M-i.
+(global-set-key (kbd "M-i") 'consult-imenu)

@@ -19,7 +19,6 @@
 (require 'which-key)
 (which-key-mode +1)
 
-;; add global kbd for imenu
-(global-set-key (kbd "C-M-S-i") 'imenu)
-
 (global-set-key (kbd "C-;") 'avy-goto-char)
+
+(global-set-key (kbd "M-s") 'save-buffer)
