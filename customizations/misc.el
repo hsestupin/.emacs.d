@@ -19,6 +19,4 @@
 (require 'which-key)
 (which-key-mode +1)
 
-(global-set-key (kbd "C-;") 'avy-goto-char)
-
 (global-set-key (kbd "M-s") 'save-buffer)

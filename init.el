@@ -13,9 +13,6 @@
 ;; Add in your own as you wish:
 (defvar my-packages 
   '(
-    ;; load directory instead of loading every file
-    load-dir    
-   
     ;; Complete anything. http://company-mode.github.io/
     company
        
@@ -79,6 +76,7 @@
 
 (load "ggtags-setup.el")
 (load "eglot-setup.el")
+(load "misc.el")
 
 ;; Go development, needs gopls on PATH
 (load "go-setup.el")
@@ -92,5 +90,22 @@
 
 (fido-vertical-mode 1)
 
+
+;; ergonomic keystrokes (many of them are shared with Intellij Idea)
+
 ;; IntelliJ's File Structure. Replaces tab-to-tab-stop on M-i.
 (global-set-key (kbd "M-i") 'consult-imenu)
+(global-set-key (kbd "M-/") 'comment-line)
+(global-set-key (kbd "M-o") 'next-multiframe-window)
+
+(with-eval-after-load 'prog-mode
+  (keymap-unset prog-mode-map "M-q" t))
+(global-set-key (kbd "M-q") 'kill-buffer-and-window)
+(global-set-key (kbd "C-q") 'kill-current-buffer)
+(global-set-key (kbd "M-e") 'switch-to-buffer)
+
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "RET") 'newline)
+
+
+(global-set-key (kbd "C-n") 'recenter-top-bottom)

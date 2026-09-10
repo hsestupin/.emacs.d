@@ -12,7 +12,6 @@
 (add-to-list 'load-path "~/.emacs.d/themes")
 (load-theme 'tomorrow-night-bright t)
 
-
 ;; set fullscreen mode on startup
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
@@ -25,6 +24,5 @@
 ;; Select another window in cyclic ordering of windows with "M-`"
 (global-set-key (kbd "M-`") 'other-window)
 
-(global-set-key (kbd "<C-tab>") 'next-multiframe-window)
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
 (set-face-attribute 'default nil :height 120)
