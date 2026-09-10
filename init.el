@@ -31,6 +31,9 @@
     ;; consult-imenu: flat, filterable jump-to-symbol list. https://github.com/minad/consult
     consult
 
+    ;; Nix highlighting via tree-sitter. Needs the nix grammar; see nix-setup.el
+    nix-ts-mode
+
     )
   "A list of packages to ensure are installed at launch.")
 
@@ -80,6 +83,9 @@
 
 ;; Go development, needs gopls on PATH
 (load "go-setup.el")
+
+;; Nix development, runs nixd through `nix run'
+(load "nix-setup.el")
 
 ;; Load some Mac OS specific configurations. Redefine Meta-key, etc
 (if (string-equal system-type "darwin")
